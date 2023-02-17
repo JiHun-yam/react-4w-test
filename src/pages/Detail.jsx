@@ -9,11 +9,6 @@ const Detail = () => {
   // navigate훅을 이용해서 돌아가기 구현 
   const navigate = useNavigate();
 
-  //버튼을 누르면
-  const onClickDeatilPage = () => {
-
-    navigate('/')
-  }
 
   return (
     <StContainer>
