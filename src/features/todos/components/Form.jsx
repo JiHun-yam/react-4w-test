@@ -26,8 +26,11 @@ const Form = () => {
     event.preventDefault();
     // 만약에 두개다 값이 비워있지 않다면 ? 
     if (body !== '' && title !== '') {
+
+      let 기본값 = { id: Math.random(), title: title, body: body, isDone: false }
+
       // 리덕스 addTodo 타입으로 입력된 title,body 값 보내기러기
-      dispatch(addTodo(title, body))
+      dispatch(addTodo(기본값))
     }
     else {
       alert('값 입력하셈')

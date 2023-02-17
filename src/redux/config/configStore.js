@@ -1,10 +1,13 @@
-import { createStore } from "redux";
-import { combineReducers } from "redux";
+import { configureStore } from '@reduxjs/toolkit';
 import todos from "../modules/todos.js";
 
-const rootReducer = combineReducers({
-  todos,
+const store = configureStore({
+  // key : value 형태로 객체
+  reducer: {
+    todos: todos,
+  }
 });
-const store = createStore(rootReducer);
+
+
 
 export default store;
